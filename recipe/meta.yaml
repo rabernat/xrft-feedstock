@@ -1,6 +1,5 @@
 {% set name = "xrft" %}
-{% set version = "0.1.dev" %}
-{% set sha256 = "b7235736b0188feeb8d25d3368ac5f7eb0d7d38129080687e82ee906b587b69a" %}
+{% set version = "0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,9 +7,9 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/rabernat/{{ name }}/archive/master.tar.gz
-  sha256: {{ sha256 }}
-
+  url: https://github.com/rabernat/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: "3172ef612134dc28f228852c4b95ddbc2437bdafcae64b2ab53311c29c9b1606"
+  
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
